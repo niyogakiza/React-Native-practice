@@ -1,13 +1,16 @@
 import React, {Component } from 'react';
 import {StyleSheet, Button,TextInput, View} from 'react-native';
 
-class placeInput extends Component {
-    constructor(props){
-        super(props);
-        this.state =  {
-            placeName: ""
-        };
-    }
+class PlaceInput extends Component {
+    // constructor(props){
+    //     super(props);
+    //
+    // }
+    state =  {
+        placeName: ""
+    };
+
+
 
 
     placeNameChangedHandler = val => {
@@ -21,7 +24,6 @@ class placeInput extends Component {
         if(this.state.placeName.trim() === ""){
             return;
         }
-
         this.props.onPlaceAdded(this.state.placeName);
     };
 
@@ -63,4 +65,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default placeInput;
+export default PlaceInput;
